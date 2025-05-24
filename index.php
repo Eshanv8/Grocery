@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD
 $hour = date("H");
 
+=======
+// Basic dynamic greeting based on time
+$hour = date("H");
+>>>>>>> 86db6da (Initial commit)
 if ($hour < 12) {
     $greeting = "Good morning!";
 } elseif ($hour < 18) {
@@ -9,7 +14,10 @@ if ($hour < 12) {
     $greeting = "Good evening!";
 }
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86db6da (Initial commit)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +59,7 @@ if ($hour < 12) {
             </div>
         </div>
     </section>
+<<<<<<< HEAD
     <section class="categories">
     <h2>All Categories</h2>
     <div class="category-list">
@@ -105,6 +114,8 @@ if ($hour < 12) {
     </div>
 </section>
 
+=======
+>>>>>>> 86db6da (Initial commit)
 
     <footer>
         <p>&copy; 2025 FreshGrocer. All rights reserved.</p>
