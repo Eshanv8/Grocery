@@ -1,9 +1,40 @@
+<?php
+<!-- index.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Grocery Delivery</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #4CAF50;
+        }
+        .logo {
+            font-size: 2em;
+            color: #fff;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            padding: 40px;
+            background: #f0f0f0;
+            text-align: center;
+            color: #fff; /* Optional: makes text readable on dark backgrounds */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,7 +48,19 @@
     </header>
 
     <section class="hero">
-        <h1><span id="greeting"></span> Welcome to FreshGrocer</h1>
+        <h1>
+            <?php
+                $hour = date("G");
+                if ($hour < 12) {
+                    $greeting = "Good morning!";
+                } elseif ($hour < 18) {
+                    $greeting = "Good afternoon!";
+                } else {
+                    $greeting = "Good evening!";
+                }
+                echo $greeting . " Welcome to FreshGrocer";
+            ?>
+        </h1>
         <p>Get your groceries delivered fresh to your doorstep!</p>
         <a href="#" class="btn">Shop Now</a>
     </section>
@@ -97,19 +140,31 @@
     <footer>
         <p>&copy; 2025 FreshGrocer. All rights reserved.</p>
     </footer>
-
-    <script>
-    // JavaScript for dynamic greeting
-    const hour = new Date().getHours();
-    let greeting;
-    if (hour < 12) {
-        greeting = "Good morning!";
-    } else if (hour < 18) {
-        greeting = "Good afternoon!";
-    } else {
-        greeting = "Good evening!";
-    }
-    document.getElementById('greeting').textContent = greeting;
-    </script>
 </body>
 </html>
+
+/* style.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #4CAF50;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

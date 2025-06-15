@@ -10,31 +10,35 @@ body {
 }
 
 header {
-    background-color: #28a745;
-    color: white;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background: #4CAF50;
 }
 
 .logo {
-    font-size: 1.8em;
+    font-size: 2em;
+    color: #fff;
     font-weight: bold;
 }
 
 nav a {
-    color: white;
-    margin-left: 20px;
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 .hero {
-    background: url('images/grocery-bg.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
+    padding: 40px;
+    background: url('images/grocery-bg.jpg') center center/cover no-repeat;
     text-align: center;
+    color: #fff;
 }
 
 .hero h1 {
