@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Groccer - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fresh Groccer</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.php">Products</a>
+      <a href="offers.php">Offers</a>
+      <a href="contact.php">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Shop by Category</h2>
+    <div class="categories">
+      <div class="category" onclick="redirectToProducts('vegetables')">Vegetables</div>
+      <div class="category" onclick="redirectToProducts('fruits')">Fruits</div>
+      <div class="category" onclick="redirectToProducts('dairy')">Dairy</div>
+      <div class="category" onclick="redirectToProducts('bakery')">Bakery</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
