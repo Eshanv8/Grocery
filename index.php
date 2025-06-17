@@ -1,11 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fresh Groccer - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="greeting" id="greeting"></div>
+
   <header>
     <h1>Fresh Groccer</h1>
     <nav>
@@ -27,5 +28,20 @@
   </main>
 
   <script src="script.js"></script>
+  <script>
+    const greetingDiv = document.getElementById('greeting');
+    const hour = new Date().getHours();
+    let greetingText = "Welcome!";
+
+    if (hour < 12) {
+      greetingText = "Good morning!";
+    } else if (hour < 18) {
+      greetingText = "Good afternoon!";
+    } else {
+      greetingText = "Good evening!";
+    }
+
+    greetingDiv.textContent = greetingText;
+  </script>
 </body>
 </html>
