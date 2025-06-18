@@ -5,96 +5,241 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    color: #333; /* Default text color */
 }
 
+/* Header Styles */
 header {
-    background-color: #28a745;
+    background-color: #28a745; /* Green */
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Responsive wrapping */
 }
 
 .logo {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between nav items */
 }
 
 nav a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section Styles */
 .hero {
     background: url('images/grocery-bg.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
+.hero p {
+    font-size: 1.1em;
+}
+
 .hero .btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #ffc107;
+    display: inline-block; /* Make it a block for margin, but inline for wrapping */
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffc107; /* Yellow */
     color: black;
     border: none;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.categories {
-    padding: 50px 20px;
+.hero .btn:hover {
+    background-color: #e0a800;
+}
+
+/* Common Section Heading Styles */
+.categories h2,
+.products-section h2 {
+    font-size: 1.8em;
+    color: #343a40; /* Dark gray */
+    margin-bottom: 25px;
     text-align: center;
 }
 
-.categories h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #343a40;
-}
-
-.category-list {
+/* Common Card Container (Category and Product) */
+.category-list,
+.product-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10px; /* Some horizontal padding for mobile */
 }
 
-.category-card {
+/* Common Card Styles */
+.category-card,
+.product-card {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 200px;
     text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content and button apart */
 }
 
+.category-card:hover,
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Specific Card Widths */
+.category-card {
+    width: 180px;
+}
+
+.product-card {
+    width: 250px;
+}
+
+/* Image Styles */
 .category-card img {
     width: 100%;
-    height: 150px;
+    height: 120px;
     object-fit: cover;
 }
 
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee; /* Separator for product image */
+}
+
+/* Card Info and Text */
 .category-card h3 {
-    padding: 15px;
-    font-size: 1.2em;
+    padding: 10px;
+    font-size: 1.1em;
     color: #28a745;
 }
 
+.product-info {
+    padding: 10px;
+    text-align: left;
+    flex-grow: 1; /* Allows info to expand */
+}
+
+.product-info h3 {
+    font-size: 1.2em;
+    color: #28a745;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #FFC107; /* Yellow accent for price */
+    margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    display: block;
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin: 0 10px 10px 10px; /* Centered with bottom margin */
+    padding: 10px 15px;
+    background-color: #FFC107;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #343a40;
+    background-color: #343a40; /* Dark gray */
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
+    margin-top: 40px; /* More space above footer */
+}
+
+/* Responsive Adjustments (Mobile First) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Align logo left */
+        padding: 10px;
+    }
+
+    header nav {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center; /* Center nav items when stacked */
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0; /* Remove horizontal margin when stacked */
+    }
+
+    .hero {
+        padding: 60px 15px; /* Adjust hero padding for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .categories,
+    .products-section {
+        padding: 30px 15px; /* Adjust section padding */
+    }
+
+    .category-card,
+    .product-card {
+        width: 100%; /* Cards take full width on small screens */
+        max-width: 300px; /* Optional: limit max width for larger phones */
+    }
+
+    .add-to-cart-btn {
+        width: calc(100% - 20px); /* Maintain padding logic */
+    }
 }

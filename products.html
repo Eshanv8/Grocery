@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - FreshGrocer</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking your existing stylesheet -->
+</head>
+<body>
+    <header>
+        <div class="logo">FreshGrocer</div>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="products.html">Products</a> <!-- Highlighted Products link -->
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="login.php">Login</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+
+    <section class="products-section">
+        <h2>Our Fresh Products</h2>
+        <div class="product-grid">
+            <!-- Product Card 1: Organic Red Apples -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/90EE90/000000?text=Apples" alt="Fresh Red Apples">
+                <div class="product-info">
+                    <h3>Organic Red Apples</h3>
+                    <p>Crisp, sweet, and juicy apples, perfect for snacking or baking. Sourced from local farms.</p>
+                    <div class="product-price">$3.99 / kg</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Organic Red Apples">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2: Farm Fresh Milk -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/ADD8E6/000000?text=Milk" alt="Fresh Milk">
+                <div class="product-info">
+                    <h3>Farm Fresh Milk</h3>
+                    <p>Pure, pasteurized cow's milk from happy cows. Rich in calcium and essential vitamins.</p>
+                    <div class="product-price">$2.49 / liter</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Farm Fresh Milk">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3: Artisan Sourdough Bread -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/FFFACD/000000?text=Bread" alt="Artisan Bread">
+                <div class="product-info">
+                    <h3>Artisan Sourdough Bread</h3>
+                    <p>Hand-crafted sourdough bread, with a perfect crust and soft interior. Great for sandwiches.</p>
+                    <div class="product-price">$4.75 / loaf</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Artisan Sourdough Bread">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4: Boneless Chicken Breast -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/DDA0DD/000000?text=Chicken" alt="Chicken Breast">
+                <div class="product-info">
+                    <h3>Boneless Chicken Breast</h3>
+                    <p>Lean, high-protein chicken breast, perfect for grilling, baking, or stir-fries.</p>
+                    <div class="product-price">$12.50 / kg</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Boneless Chicken Breast">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5: Atlantic Salmon Fillet -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/87CEFA/000000?text=Salmon" alt="Salmon Fillet">
+                <div class="product-info">
+                    <h3>Atlantic Salmon Fillet</h3>
+                    <p>Fresh, responsibly sourced salmon fillets. Rich in Omega-3 fatty acids for a healthy diet.</p>
+                    <div class="product-price">$18.00 / kg</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Atlantic Salmon Fillet">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6: Large Brown Eggs -->
+            <div class="product-card">
+                <img src="https://placehold.co/400x200/FFDAB9/000000?text=Eggs" alt="Eggs">
+                <div class="product-info">
+                    <h3>Large Brown Eggs</h3>
+                    <p>Farm-fresh large brown eggs, perfect for breakfast, baking, or any recipe.</p>
+                    <div class="product-price">$3.50 / dozen</div>
+                </div>
+                <button class="add-to-cart-btn" data-product="Large Brown Eggs">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FreshGrocer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productName = event.target.dataset.product;
+                    alert(`"${productName}" has been added to your cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

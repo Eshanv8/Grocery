@@ -10,7 +10,8 @@
     <header>
         <div class="logo">FreshGrocer</div>
         <nav>
-            <a href="#">Home</a>
+            <a href="index.php">Home</a>
+            <a href="products.html">Products</a>
             <a href="#">Categories</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
@@ -21,8 +22,9 @@
 
     <section class="hero">
         <h1 id="greeting">Welcome to FreshGrocer</h1>
+        <br>
         <p>Get your groceries delivered fresh to your doorstep!</p>
-        <a href="#" class="btn">Shop Now</a>
+        <a href="products.html" class="btn">Shop Now</a>
     </section>
 
     <section class="categories">
